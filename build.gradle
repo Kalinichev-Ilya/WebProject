@@ -1,0 +1,18 @@
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.h2database:h2:+'
+    compile "log4j:log4j:+"
+    testCompile 'junit:junit:+'
+}
