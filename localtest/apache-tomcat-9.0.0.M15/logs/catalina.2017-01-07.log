@@ -1,0 +1,33 @@
+07-Jan-2017 19:39:19.143 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.0.M15
+07-Jan-2017 19:39:19.149 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 5 2016 13:44:25 UTC
+07-Jan-2017 19:39:19.149 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.0.0
+07-Jan-2017 19:39:19.150 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 7
+07-Jan-2017 19:39:19.150 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.1
+07-Jan-2017 19:39:19.150 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+07-Jan-2017 19:39:19.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_102\jre
+07-Jan-2017 19:39:19.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_102-b14
+07-Jan-2017 19:39:19.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+07-Jan-2017 19:39:19.152 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\java\IdeaProjects\epam\WebProject\localtest\apache-tomcat-9.0.0.M15
+07-Jan-2017 19:39:19.152 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\java\IdeaProjects\epam\WebProject\localtest\apache-tomcat-9.0.0.M15
+07-Jan-2017 19:39:19.154 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\java\IdeaProjects\epam\WebProject\localtest\apache-tomcat-9.0.0.M15\conf\logging.properties
+07-Jan-2017 19:39:19.155 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Jan-2017 19:39:19.157 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+07-Jan-2017 19:39:19.159 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+07-Jan-2017 19:39:19.160 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\java\IdeaProjects\epam\WebProject\localtest\apache-tomcat-9.0.0.M15
+07-Jan-2017 19:39:19.161 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\java\IdeaProjects\epam\WebProject\localtest\apache-tomcat-9.0.0.M15
+07-Jan-2017 19:39:19.162 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\java\IdeaProjects\epam\WebProject\localtest\apache-tomcat-9.0.0.M15\temp
+07-Jan-2017 19:39:19.163 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_102\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_102\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Common Files\Autodesk Shared\;C:\java\gradle-3.1;C:\Users\Vovchik\Desktop\Simple Java Web Project\gradle-3.2.1\bin;C:\java\gradle-3.1;C:\Users\Vovchik\Desktop\Simple Java Web Project\gradle-3.2.1\bin;;.
+07-Jan-2017 19:39:19.675 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Jan-2017 19:39:20.081 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+07-Jan-2017 19:39:20.086 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+07-Jan-2017 19:39:20.091 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+07-Jan-2017 19:39:20.093 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2165 ms
+07-Jan-2017 19:39:20.154 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+07-Jan-2017 19:39:20.155 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.0.M15
+07-Jan-2017 19:39:20.196 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\java\IdeaProjects\epam\WebProject\localtest\apache-tomcat-9.0.0.M15\webapps\ROOT
+07-Jan-2017 19:39:21.398 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Jan-2017 19:39:21.765 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\java\IdeaProjects\epam\WebProject\localtest\apache-tomcat-9.0.0.M15\webapps\ROOT has finished in 1,569 ms
+07-Jan-2017 19:39:21.770 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [http-nio-8080]
+07-Jan-2017 19:39:21.813 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [ajp-nio-8009]
+07-Jan-2017 19:39:21.816 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1722 ms
+07-Jan-2017 19:40:02.996 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
