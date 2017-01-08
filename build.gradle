@@ -4,6 +4,9 @@ apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'idea'
 
+group = 'com.webproject'
+description = "Web project"
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -15,6 +18,7 @@ dependencies {
     compile 'com.h2database:h2:+'
     compile 'log4j:log4j:+'
     testCompile 'junit:junit:+'
-    compile 'javax.servlet:javax.servlet-api:3.0.1'
+    providedCompile 'javax.servlet:servlet-api:+'
+    runtime 'javax.servlet:jstl:+'
 }
 

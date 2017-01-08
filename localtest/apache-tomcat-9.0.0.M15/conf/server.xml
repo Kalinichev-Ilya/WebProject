@@ -148,7 +148,8 @@
       <Host name="localhost"  appBase="webapps"
             unpackWARs="true" autoDeploy="true">
 
-      <Contex path="" docBase="C:\java\IdeaProjects\epam\WebProject\web"/>
+      <Context path="" docBase="C:\java\IdeaProjects\epam\WebProject\web"
+        reloadable="true"/>
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
