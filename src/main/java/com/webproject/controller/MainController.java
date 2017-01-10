@@ -1,4 +1,4 @@
-package com.webproject.servlets;
+package com.webproject.controller;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class HelloServlet extends HttpServlet {
+public class MainController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -15,7 +15,7 @@ public class HelloServlet extends HttpServlet {
 
         String name = "MAN";
         req.setAttribute("name", name);
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/index.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/jsp/index.jsp");
         requestDispatcher.forward(req, resp);
     }
 }
