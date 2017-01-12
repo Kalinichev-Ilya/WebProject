@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>test</servlet-name>
-        <servlet-class>com.webproject.controller.MainController</servlet-class>
+        <servlet-class>com.webproject.controller.SignUpServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
