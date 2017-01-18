@@ -6,6 +6,7 @@
 
 <body>
 ${message}
+${error}
 <form action="/login" method="post">
     <ul>
         <li>

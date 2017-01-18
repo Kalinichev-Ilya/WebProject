@@ -11,6 +11,7 @@
     <title>Welcome</title>
 </head>
 <body>
+<h1>Hello ${user}!</h1>
 <h1>Login was successful</h1>
 <table border="1" cellpadding="5">
     <tr>

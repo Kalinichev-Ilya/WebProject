@@ -1,6 +1,6 @@
 package com.webproject.exceptions;
 
-public class InvalidPasswordException extends RuntimeException {
+public class InvalidPasswordException extends AnythingWithDataBaseConnectionException {
     public InvalidPasswordException() {
     }
 

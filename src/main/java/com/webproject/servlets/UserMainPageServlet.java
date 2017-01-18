@@ -1,5 +1,6 @@
 package com.webproject.servlets;
 
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,6 +16,4 @@ public class UserMainPageServlet extends HttpServlet {
         RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/user.jsp");
         dispatcher.forward(req, resp);
     }
-    
-
 }
