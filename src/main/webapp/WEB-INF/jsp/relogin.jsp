@@ -1,14 +1,21 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Vovchik
+  Date: 19.01.2017
+  Time: 16:43
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Registration page</title>
+    <title>Relogin page</title>
 </head>
 <body>
-
-${messageFilter}
+<h1>Relogin for continue</h1>
+${error}
+${message}
 <br>
-
-<form action="/registration" method="post">
+<form action="/login" method="post">
     <ul>
         <li>
             <label for="login"> Login </label>
@@ -19,13 +26,8 @@ ${messageFilter}
             <input type="text" name="pwd" id="pwd"/>
         </li>
         <li>
-            <label for="pwd_rpt"> Repeat password </label>
-            <input type="text" name="pwd_rpt" id="pwd_rpt"/>
-        </li>
-        <li>
-            <button type="submit">Sign up</button>
+            <button type="submit">Log in</button>
         </li>
     </ul>
 </form>
-</body>
 </html>
