@@ -15,7 +15,6 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<!--suppress ALL -->
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
@@ -38,7 +37,7 @@
 
   <!-- The default servlet for all web applications, that serves static     -->
   <!-- resources.  It processes all requests that are not mapped to other   -->
-  <!-- com.webproject.servlets with servlet mappings (defined either here or in your own   -->
+  <!-- servlets with servlet mappings (defined either here or in your own   -->
   <!-- web.xml file).  This servlet supports the following initialization   -->
   <!-- parameters (default values are in square brackets):                  -->
   <!--                                                                      -->
@@ -103,7 +102,7 @@
 
     <servlet>
         <servlet-name>default</servlet-name>
-        <servlet-class>org.apache.catalina.com.webproject.servlets.DefaultServlet</servlet-class>
+        <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
         <init-param>
             <param-name>debug</param-name>
             <param-value>0</param-value>
@@ -132,7 +131,7 @@
   <!--                       debugging information?  [true]                 -->
   <!--                                                                      -->
   <!--   classpath           What class path should I use while compiling   -->
-  <!--                       generated com.webproject.servlets?  [Created dynamically      -->
+  <!--                       generated servlets?  [Created dynamically      -->
   <!--                       based on the current web application]          -->
   <!--                                                                      -->
   <!--   compiler            Which compiler Ant should use to compile JSP   -->
@@ -249,7 +248,6 @@
   <!--                       attributes described in JSP.1.6 be applied to  -->
   <!--                       the expression? [true]                         -->
 
-    <!--suppress WebProperties -->
     <servlet>
         <servlet-name>jsp</servlet-name>
         <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
@@ -363,7 +361,7 @@
 <!--
     <servlet>
         <servlet-name>cgi</servlet-name>
-        <servlet-class>org.apache.catalina.com.webproject.servlets.CGIServlet</servlet-class>
+        <servlet-class>org.apache.catalina.servlets.CGIServlet</servlet-class>
         <init-param>
           <param-name>cgiPathPrefix</param-name>
           <param-value>WEB-INF/cgi</param-value>
@@ -376,8 +374,8 @@
   <!-- ================ Built In Servlet Mappings ========================= -->
 
 
-  <!-- The servlet mappings for the built in com.webproject.servlets defined above.  Note  -->
-  <!-- that, by default, the CGI and SSI com.webproject.servlets are *not* mapped.  You    -->
+  <!-- The servlet mappings for the built in servlets defined above.  Note  -->
+  <!-- that, by default, the CGI and SSI servlets are *not* mapped.  You    -->
   <!-- must uncomment these mappings (or add them to your application's own -->
   <!-- web.xml deployment descriptor) to enable these services              -->
 
