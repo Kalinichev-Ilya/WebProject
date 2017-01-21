@@ -17,6 +17,7 @@ public class UserServlet extends HttpServlet {
         RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/user.jsp");
         System.out.println(">> User servlet <<");
         Cookie[] coookies = req.getCookies();
+
         for(Cookie cookie : coookies){
             req.setAttribute("user", cookie.getValue());
         }

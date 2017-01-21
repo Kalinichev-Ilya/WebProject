@@ -5,13 +5,18 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <!--JNDI-->
     <resource-ref>
         <description>DB Connection</description>
-        <res-ref-name>jdbc/UsersDB</res-ref-name>
+        <res-ref-name>jdbc/webprojectDB</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
         <res-auth>Container</res-auth>
     </resource-ref>
 
+    <!--Listener Connection Pool-->
+    <listener>
+        <listener-class>com.webproject.listeners.DBCPContextListener</listener-class>
+    </listener>
 
     <!--Login Page-->
     <servlet>
@@ -22,7 +27,6 @@
         <servlet-name>authorizationServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-
 
     <!--Authorization filter-->
     <filter>
@@ -54,16 +58,4 @@
         <servlet-name>reloginServlet</servlet-name>
         <url-pattern>/relogin</url-pattern>
     </servlet-mapping>
-
-    <!--&lt;!&ndash;Request Login Filter&ndash;&gt;-->
-    <!--<filter>-->
-        <!--<filter-name>requestLoggingFilter</filter-name> &lt;!&ndash; mandatory &ndash;&gt;-->
-        <!--<filter-class>com.webproject.filters.RequestLoginFilter</filter-class> &lt;!&ndash; mandatory &ndash;&gt;-->
-    <!--</filter>-->
-
-    <!--<filter-mapping>-->
-        <!--<filter-name>requestLoggingFilter</filter-name> &lt;!&ndash; mandatory &ndash;&gt;-->
-        <!--<url-pattern>/*</url-pattern> &lt;!&ndash; either url-pattern or servlet-name is mandatory &ndash;&gt;-->
-        <!--<dispatcher>REQUEST</dispatcher>-->
-    <!--</filter-mapping>-->
 </web-app>

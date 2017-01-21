@@ -14,13 +14,16 @@ public class AuthorizationFilter extends MainFilter {
             throws IOException, ServletException {
 
         HttpSession session = request.getSession(false);
-        boolean loggedOut = session != null && session.getAttribute("user") != null; //TODO разобраться с атрибутом ссессии.
-        if (loggedOut) {
-            System.out.println("filter - > loggedOut = " + loggedOut + " LOGIN VALIDATE FALSE, relogin.");
+
+        boolean loggedIN = session != null && session.getAttribute("user") != null; //TODO разобраться с атрибутом ссессии.
+        System.out.println();
+        if (loggedIN) {
+            System.out.println("filter - > logged in = " + loggedIN + " LOGIN VALIDATE FALSE, relogin.");
 
             response.sendRedirect("/relogin");
+            return;
         } else {
-            System.out.println("filter - > loggedOut = " + loggedOut + " LOGIN VALIDATE OK, set redirect to user page.");
+            System.out.println("filter - > logged in = " + loggedIN + " LOGIN VALIDATE OK, set redirect to user page.");
 
             response.sendRedirect("/user");
         }

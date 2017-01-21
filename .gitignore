@@ -19,3 +19,5 @@ gradlew*
 *.jar
 *.war
 *.ear
+/src/main/resourcesUsersDB.mv.db
+/src/main/resources.trace.db

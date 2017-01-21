@@ -1,16 +1,21 @@
 package com.webproject.servlets;
 
 import com.webproject.entity.User;
-import com.webproject.exceptions.InvalidPasswordException;
 import com.webproject.exceptions.AnythingWithDataBaseConnectionException;
+import com.webproject.listeners.DBCPContextListener;
 import com.webproject.service.JdbcService;
 import com.webproject.service.SecurityService;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
+import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.SQLException;
 
 public class AuthorisationServlet extends HttpServlet {
     JdbcService jdbcService = new JdbcService();
@@ -27,10 +32,15 @@ public class AuthorisationServlet extends HttpServlet {
         String login = request.getParameter("login");
         String password = request.getParameter("pwd");
         String hashUserPwd = SecurityService.md5(password).toString();
+        System.out.println(login + " " + password);
+
         try {
-            Connection con = jdbcService.getConnection();
-            User user = jdbcService.find(con, login, hashUserPwd);
+            DataSource dataSource = DBCPContextListener.getInstance(getServletContext()).getDataSource();
+            Connection conn = dataSource.getConnection();//TODO Соединение разорвано: "java.net.ConnectException: Connection refused: connect: localhost
+            User user = jdbcService.find(conn, login, hashUserPwd);
+
             if (login.equals(user.getLogin()) && hashUserPwd.equals(user.getPassword())) {
+
                 System.out.println("servlet - > " + (login.equals(user.getLogin()) && hashUserPwd.equals(user.getPassword())));
                 HttpSession session = request.getSession();
                 session.setAttribute("user", user.getLogin());
@@ -41,14 +51,19 @@ public class AuthorisationServlet extends HttpServlet {
                 response.sendRedirect("/user");
                 return;
             } else {
+
                 request.setAttribute("message", "Wrong user name or password.");
-                RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/jsp/relogin");
+                RequestDispatcher rd = getServletContext().getRequestDispatcher("/relogin");
                 rd.include(request, response);
                 return;
             }
         } catch (AnythingWithDataBaseConnectionException e) {
+
             request.setAttribute("error", "AnythingWithDataBaseConnectionException Please try again later.");
-            request.getRequestDispatcher("/WEB-INF/jsp/relogin").forward(request, response);
+            request.getRequestDispatcher("/relogin").forward(request, response);
+        } catch (SQLException e) {
+            System.out.println("WHAT HAPPENS! Authorisation servlet.");
+            e.printStackTrace();
         }
     }
 }
