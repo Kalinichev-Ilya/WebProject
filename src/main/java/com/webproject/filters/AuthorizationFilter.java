@@ -2,6 +2,7 @@ package com.webproject.filters;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -13,11 +14,18 @@ public class AuthorizationFilter extends MainFilter {
     public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws IOException, ServletException {
 
-        HttpSession session = request.getSession(false);
+        HttpSession session = request.getSession();
+        Cookie[] cookies = request.getCookies();
+        boolean userCookie = false;
 
-        boolean loggedIN = session != null && session.getAttribute("user") != null; //TODO разобраться с атрибутом ссессии.
-        System.out.println();
-        if (loggedIN) {
+        for(Cookie cookie: cookies){
+            if(cookie.getName().equals("user")){
+                userCookie = true;
+            }
+        }
+        boolean loggedIN = session != null && userCookie;
+
+        if (!loggedIN) {
             System.out.println("filter - > logged in = " + loggedIN + " LOGIN VALIDATE FALSE, relogin.");
 
             response.sendRedirect("/relogin");
