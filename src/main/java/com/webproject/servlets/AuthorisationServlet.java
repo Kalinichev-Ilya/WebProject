@@ -6,9 +6,6 @@ import com.webproject.listeners.DBCPContextListener;
 import com.webproject.service.JdbcService;
 import com.webproject.service.SecurityService;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -36,7 +33,7 @@ public class AuthorisationServlet extends HttpServlet {
 
         try {
             DataSource dataSource = DBCPContextListener.getInstance(getServletContext()).getDataSource();
-            Connection conn = dataSource.getConnection();//TODO Соединение разорвано: "java.net.ConnectException: Connection refused: connect: localhost
+            Connection conn = dataSource.getConnection();//TODO Conn close;
             User user = jdbcService.find(conn, login, hashUserPwd);
 
             if (login.equals(user.getLogin()) && hashUserPwd.equals(user.getPassword())) {

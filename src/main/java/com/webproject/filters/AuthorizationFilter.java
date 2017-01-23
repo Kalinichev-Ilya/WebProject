@@ -13,13 +13,13 @@ public class AuthorizationFilter extends MainFilter {
     @Override
     public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws IOException, ServletException {
-
+        //TODO Сделать исключение по url
         HttpSession session = request.getSession();
         Cookie[] cookies = request.getCookies();
         boolean userCookie = false;
 
-        for(Cookie cookie: cookies){
-            if(cookie.getName().equals("user")){
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("user")) {
                 userCookie = true;
             }
         }

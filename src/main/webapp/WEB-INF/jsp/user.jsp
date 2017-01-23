@@ -2,9 +2,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<sql:query var="listUsers" dataSource="jdbc/webprojectDB">
-    select USER_NAME, USER_PASS from USERS;
-</sql:query>
 
 <html>
 <head>
@@ -19,12 +16,11 @@
         <th>Password</th>
     </tr>
     <br>
-    <c:forEach var="user" items="${listUsers.rows}">
         <tr>
-            <td><c:out value="${users.login}"/></td>
-            <td><c:out value="${users.password}"/></td>
+            <td>${login}</td>
+            <td>${password}</td>
         </tr>
-    </c:forEach>
+
 </table>
 </body>
 </html>

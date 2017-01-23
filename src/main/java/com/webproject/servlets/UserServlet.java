@@ -19,8 +19,11 @@ public class UserServlet extends HttpServlet {
         Cookie[] coookies = req.getCookies();
 
         for(Cookie cookie : coookies){
-            req.setAttribute("user", cookie.getValue());
+            if(cookie.getName().equals("user")) {
+                req.setAttribute("user", cookie.getValue());
+            }
         }
+        //TODO Вывести таблицу Users;
         dispatcher.forward(req, resp);
     }
 }

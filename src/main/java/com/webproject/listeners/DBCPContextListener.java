@@ -7,7 +7,6 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.sql.DataSource;
-import java.sql.SQLException;
 
 public class DBCPContextListener implements ServletContextListener {
 
@@ -15,6 +14,7 @@ public class DBCPContextListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent event) {
+
         ServletContext servletContext = event.getServletContext();
         try {
             dataSource = (DataSource) new InitialContext().lookup("java:comp/env/jdbc/webprojectDB");
@@ -27,12 +27,7 @@ public class DBCPContextListener implements ServletContextListener {
 
     @Override
     public void contextDestroyed(ServletContextEvent event) {
-        try {
-            dataSource.getConnection().close();
-            System.out.println("Conn close.");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+
     }
 
     public DataSource getDataSource() {
