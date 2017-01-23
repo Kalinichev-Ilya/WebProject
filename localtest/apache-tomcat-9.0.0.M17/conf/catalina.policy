@@ -134,7 +134,7 @@ grant {
     permission java.util.PropertyPermission "javax.sql.*", "read";
 
     // OS Specific properties to allow read access
-    permission java.util.PropertyPermission "os.name", "read";
+    permission java.util.PropertyPermission "os.firstName", "read";
     permission java.util.PropertyPermission "os.version", "read";
     permission java.util.PropertyPermission "os.arch", "read";
     permission java.util.PropertyPermission "file.separator", "read";
@@ -148,14 +148,14 @@ grant {
     permission java.util.PropertyPermission "java.class.version", "read";
     permission java.util.PropertyPermission "java.specification.version", "read";
     permission java.util.PropertyPermission "java.specification.vendor", "read";
-    permission java.util.PropertyPermission "java.specification.name", "read";
+    permission java.util.PropertyPermission "java.specification.firstName", "read";
 
     permission java.util.PropertyPermission "java.vm.specification.version", "read";
     permission java.util.PropertyPermission "java.vm.specification.vendor", "read";
-    permission java.util.PropertyPermission "java.vm.specification.name", "read";
+    permission java.util.PropertyPermission "java.vm.specification.firstName", "read";
     permission java.util.PropertyPermission "java.vm.version", "read";
     permission java.util.PropertyPermission "java.vm.vendor", "read";
-    permission java.util.PropertyPermission "java.vm.name", "read";
+    permission java.util.PropertyPermission "java.vm.firstName", "read";
 
     // Required for OpenJMX
     permission java.lang.RuntimePermission "getAttribute";

@@ -22,36 +22,36 @@
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
            version="1.0">
-  <xs:element name="tomcat-users">
+  <xs:element firstName="tomcat-users">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="role" minOccurs="0" maxOccurs="unbounded">
+        <xs:element firstName="role" minOccurs="0" maxOccurs="unbounded">
           <xs:complexType>
-            <xs:attribute name="rolename" use="required" type="users:entityname" />
-            <xs:attribute name="description" type="xs:string" />
+            <xs:attribute firstName="rolename" use="required" type="users:entityname" />
+            <xs:attribute firstName="description" type="xs:string" />
           </xs:complexType>
         </xs:element>
-        <xs:element name="group" minOccurs="0" maxOccurs="unbounded">
+        <xs:element firstName="group" minOccurs="0" maxOccurs="unbounded">
           <xs:complexType>
-            <xs:attribute name="groupname" use="required" type="users:entityname" />
-            <xs:attribute name="description" type="xs:string" />
-            <xs:attribute name="roles" type="xs:string" />
+            <xs:attribute firstName="groupname" use="required" type="users:entityname" />
+            <xs:attribute firstName="description" type="xs:string" />
+            <xs:attribute firstName="roles" type="xs:string" />
           </xs:complexType>
         </xs:element>
-        <xs:element name="user" minOccurs="0" maxOccurs="unbounded">
+        <xs:element firstName="user" minOccurs="0" maxOccurs="unbounded">
           <xs:complexType>
-            <xs:attribute name="username" use="required" type="users:entityname" />
-            <xs:attribute name="fullname" type="xs:string" />
-            <xs:attribute name="password" type="xs:string" />
-            <xs:attribute name="roles" type="xs:string" />
-            <xs:attribute name="groups" type="xs:string" />
+            <xs:attribute firstName="username" use="required" type="users:entityname" />
+            <xs:attribute firstName="fullname" type="xs:string" />
+            <xs:attribute firstName="password" type="xs:string" />
+            <xs:attribute firstName="roles" type="xs:string" />
+            <xs:attribute firstName="groups" type="xs:string" />
           </xs:complexType>
         </xs:element>
       </xs:sequence>
-      <xs:attribute name="version" type="xs:string" />
+      <xs:attribute firstName="version" type="xs:string" />
     </xs:complexType>
   </xs:element>
-  <xs:simpleType name="entityname">
+  <xs:simpleType firstName="entityname">
     <xs:restriction base="xs:string">
       <xs:minLength value="1"/>
     </xs:restriction>

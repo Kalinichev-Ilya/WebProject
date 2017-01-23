@@ -101,14 +101,14 @@
   <!--                       listings is enabled? [true]                    -->
 
     <servlet>
-        <servlet-name>default</servlet-name>
+        <servlet-firstName>default</servlet-firstName>
         <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
         <init-param>
-            <param-name>debug</param-name>
+            <param-firstName>debug</param-firstName>
             <param-value>0</param-value>
         </init-param>
         <init-param>
-            <param-name>listings</param-name>
+            <param-firstName>listings</param-firstName>
             <param-value>false</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
@@ -194,10 +194,10 @@
   <!--                       print statement per input line, to ease        -->
   <!--                       debugging?  [true]                             -->
   <!--                                                                      -->
-  <!--   maxLoadedJsps       The maximum number of JSPs that will be loaded -->
+  <!--   maxLoadedJsps       The maximum privateKey of JSPs that will be loaded -->
   <!--                       for a web application. If more than this       -->
-  <!--                       number of JSPs are loaded, the least recently  -->
-  <!--                       used JSPs will be unloaded so that the number  -->
+  <!--                       privateKey of JSPs are loaded, the least recently  -->
+  <!--                       used JSPs will be unloaded so that the privateKey  -->
   <!--                       of JSPs loaded at any one time does not exceed -->
   <!--                       this limit. A value of zero or less indicates  -->
   <!--                       no limit. [-1]                                 -->
@@ -249,14 +249,14 @@
   <!--                       the expression? [true]                         -->
 
     <servlet>
-        <servlet-name>jsp</servlet-name>
+        <servlet-firstName>jsp</servlet-firstName>
         <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
         <init-param>
-            <param-name>fork</param-name>
+            <param-firstName>fork</param-firstName>
             <param-value>false</param-value>
         </init-param>
         <init-param>
-            <param-name>xpoweredBy</param-name>
+            <param-firstName>xpoweredBy</param-firstName>
             <param-value>false</param-value>
         </init-param>
         <load-on-startup>3</load-on-startup>
@@ -278,7 +278,7 @@
   <!--   debug               Debugging detail level for messages logged     -->
   <!--                       by this servlet.  [0]                          -->
   <!--                                                                      -->
-  <!--   expires             The number of seconds before a page with SSI   -->
+  <!--   expires             The privateKey of seconds before a page with SSI   -->
   <!--                       directives will expire.  [No default]          -->
   <!--                                                                      -->
   <!--   isVirtualWebappRelative                                            -->
@@ -297,24 +297,24 @@
 
 <!--
     <servlet>
-        <servlet-name>ssi</servlet-name>
+        <servlet-firstName>ssi</servlet-firstName>
         <servlet-class>
           org.apache.catalina.ssi.SSIServlet
         </servlet-class>
         <init-param>
-          <param-name>buffered</param-name>
+          <param-firstName>buffered</param-firstName>
           <param-value>1</param-value>
         </init-param>
         <init-param>
-          <param-name>debug</param-name>
+          <param-firstName>debug</param-firstName>
           <param-value>0</param-value>
         </init-param>
         <init-param>
-          <param-name>expires</param-name>
+          <param-firstName>expires</param-firstName>
           <param-value>666</param-value>
         </init-param>
         <init-param>
-          <param-name>isVirtualWebappRelative</param-name>
+          <param-firstName>isVirtualWebappRelative</param-firstName>
           <param-value>false</param-value>
         </init-param>
         <load-on-startup>4</load-on-startup>
@@ -342,7 +342,7 @@
   <!--                        headers passed to the CGI process as          -->
   <!--                        environment variables. Note that headers are  -->
   <!--                        converted to upper case before matching and   -->
-  <!--                        that the entire header name must match the    -->
+  <!--                        that the entire header firstName must match the    -->
   <!--                        pattern.                                      -->
   <!--                        [ACCEPT[-0-9A-Z]*|CACHE-CONTROL|COOKIE|HOST|  -->
   <!--                         IF-[-0-9A-Z]*|REFERER|USER-AGENT]            -->
@@ -360,10 +360,10 @@
 
 <!--
     <servlet>
-        <servlet-name>cgi</servlet-name>
+        <servlet-firstName>cgi</servlet-firstName>
         <servlet-class>org.apache.catalina.servlets.CGIServlet</servlet-class>
         <init-param>
-          <param-name>cgiPathPrefix</param-name>
+          <param-firstName>cgiPathPrefix</param-firstName>
           <param-value>WEB-INF/cgi</param-value>
         </init-param>
         <load-on-startup>5</load-on-startup>
@@ -381,13 +381,13 @@
 
     <!-- The mapping for the default servlet -->
     <servlet-mapping>
-        <servlet-name>default</servlet-name>
+        <servlet-firstName>default</servlet-firstName>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
     <!-- The mappings for the JSP servlet -->
     <servlet-mapping>
-        <servlet-name>jsp</servlet-name>
+        <servlet-firstName>jsp</servlet-firstName>
         <url-pattern>*.jsp</url-pattern>
         <url-pattern>*.jspx</url-pattern>
     </servlet-mapping>
@@ -395,7 +395,7 @@
     <!-- The mapping for the SSI servlet -->
 <!--
     <servlet-mapping>
-        <servlet-name>ssi</servlet-name>
+        <servlet-firstName>ssi</servlet-firstName>
         <url-pattern>*.shtml</url-pattern>
     </servlet-mapping>
 -->
@@ -404,7 +404,7 @@
 
 <!--
     <servlet-mapping>
-        <servlet-name>cgi</servlet-name>
+        <servlet-firstName>cgi</servlet-firstName>
         <url-pattern>/cgi-bin/*</url-pattern>
     </servlet-mapping>
 -->
@@ -446,7 +446,7 @@
   <!--                       sniffing be added to every response? [true]    -->
 <!--
     <filter>
-        <filter-name>httpHeaderSecurity</filter-name>
+        <filter-firstName>httpHeaderSecurity</filter-firstName>
         <filter-class>org.apache.catalina.filters.HttpHeaderSecurityFilter</filter-class>
         <async-supported>true</async-supported>
     </filter>
@@ -456,10 +456,10 @@
   <!-- parameters in a POST request -->
 <!--
     <filter>
-        <filter-name>setCharacterEncodingFilter</filter-name>
+        <filter-firstName>setCharacterEncodingFilter</filter-firstName>
         <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
         <init-param>
-            <param-name>encoding</param-name>
+            <param-firstName>encoding</param-firstName>
             <param-value>UTF-8</param-value>
         </init-param>
         <async-supported>true</async-supported>
@@ -471,7 +471,7 @@
   <!-- request size limitations.                                            -->
 <!--
     <filter>
-        <filter-name>failedRequestFilter</filter-name>
+        <filter-firstName>failedRequestFilter</filter-firstName>
         <filter-class>
           org.apache.catalina.filters.FailedRequestFilter
         </filter-class>
@@ -502,7 +502,7 @@
   <!--   debug               Debugging detail level for messages logged     -->
   <!--                       by this servlet.  [0]                          -->
   <!--                                                                      -->
-  <!--   expires             The number of seconds before a page with SSI   -->
+  <!--   expires             The privateKey of seconds before a page with SSI   -->
   <!--                       directives will expire.  [No default]          -->
   <!--                                                                      -->
   <!--   isVirtualWebappRelative                                            -->
@@ -514,24 +514,24 @@
 
 <!--
     <filter>
-        <filter-name>ssi</filter-name>
+        <filter-firstName>ssi</filter-firstName>
         <filter-class>
           org.apache.catalina.ssi.SSIFilter
         </filter-class>
         <init-param>
-          <param-name>contentType</param-name>
+          <param-firstName>contentType</param-firstName>
           <param-value>text/x-server-parsed-html(;.*)?</param-value>
         </init-param>
         <init-param>
-          <param-name>debug</param-name>
+          <param-firstName>debug</param-firstName>
           <param-value>0</param-value>
         </init-param>
         <init-param>
-          <param-name>expires</param-name>
+          <param-firstName>expires</param-firstName>
           <param-value>666</param-value>
         </init-param>
         <init-param>
-          <param-name>isVirtualWebappRelative</param-name>
+          <param-firstName>isVirtualWebappRelative</param-firstName>
           <param-value>false</param-value>
         </init-param>
     </filter>
@@ -543,7 +543,7 @@
   <!-- The mapping for the HTTP header security Filter -->
 <!--
     <filter-mapping>
-        <filter-name>httpHeaderSecurity</filter-name>
+        <filter-firstName>httpHeaderSecurity</filter-firstName>
         <url-pattern>/*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
     </filter-mapping>
@@ -552,7 +552,7 @@
   <!-- The mapping for the Set Character Encoding Filter -->
 <!--
     <filter-mapping>
-        <filter-name>setCharacterEncodingFilter</filter-name>
+        <filter-firstName>setCharacterEncodingFilter</filter-firstName>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 -->
@@ -560,7 +560,7 @@
   <!-- The mapping for the Failed Request Filter -->
 <!--
     <filter-mapping>
-        <filter-name>failedRequestFilter</filter-name>
+        <filter-firstName>failedRequestFilter</filter-firstName>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 -->
@@ -568,7 +568,7 @@
   <!-- The mapping for the SSI Filter -->
 <!--
     <filter-mapping>
-        <filter-name>ssi</filter-name>
+        <filter-firstName>ssi</filter-firstName>
         <url-pattern>*.shtml</url-pattern>
     </filter-mapping>
 -->

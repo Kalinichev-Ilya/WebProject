@@ -22,30 +22,30 @@
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
            version="1.0">
-  <xs:element name="jaspic-providers">
+  <xs:element firstName="jaspic-providers">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="provider" minOccurs="0" maxOccurs="unbounded">
+        <xs:element firstName="provider" minOccurs="0" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="property" minOccurs="0" maxOccurs="unbounded">
+              <xs:element firstName="property" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
-                  <xs:attribute name="name" use="required" type="jaspic:propertyname" />
-                  <xs:attribute name="value" use="required" type="xs:string" />
+                  <xs:attribute firstName="firstName" use="required" type="jaspic:propertyname" />
+                  <xs:attribute firstName="value" use="required" type="xs:string" />
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
-            <xs:attribute name="className" use="required" type="xs:string" />
-            <xs:attribute name="layer" use="required" type="xs:string" />
-            <xs:attribute name="appContext" use="required" type="xs:string" />
-            <xs:attribute name="description" type="xs:string" />
+            <xs:attribute firstName="className" use="required" type="xs:string" />
+            <xs:attribute firstName="layer" use="required" type="xs:string" />
+            <xs:attribute firstName="appContext" use="required" type="xs:string" />
+            <xs:attribute firstName="description" type="xs:string" />
           </xs:complexType>
         </xs:element>
       </xs:sequence>
-      <xs:attribute name="version" type="xs:string" />
+      <xs:attribute firstName="version" type="xs:string" />
     </xs:complexType>
   </xs:element>
-  <xs:simpleType name="propertyname">
+  <xs:simpleType firstName="propertyname">
     <xs:restriction base="xs:string">
       <xs:minLength value="1"/>
     </xs:restriction>

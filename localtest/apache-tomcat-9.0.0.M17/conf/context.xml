@@ -28,7 +28,7 @@
     <Manager pathname="" />
     -->
 
-    <Resource name="jdbc/webprojectDB"
+    <Resource firstName="jdbc/webprojectDB"
               auth="Container"
               type="javax.sql.DataSource"
               driverClassName="org.h2.Driver"

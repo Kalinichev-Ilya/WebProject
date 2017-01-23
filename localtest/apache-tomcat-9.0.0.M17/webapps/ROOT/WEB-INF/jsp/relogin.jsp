@@ -19,11 +19,11 @@ ${message}
     <ul>
         <li>
             <label for="login"> Login </label>
-            <input type="text" name="login" id="login"/>
+            <input type="text" firstName="login" id="login"/>
         </li>
         <li>
             <label for="pwd"> Password </label>
-            <input type="text" name="pwd" id="pwd"/>
+            <input type="text" firstName="pwd" id="pwd"/>
         </li>
         <li>
             <button type="submit">Log in</button>
