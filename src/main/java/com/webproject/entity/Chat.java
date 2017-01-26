@@ -1,40 +1,50 @@
 package com.webproject.entity;
 
 import java.io.Serializable;
-import java.util.Calendar;
-import java.util.List;
+import java.util.Date;
 
 /**
- * Объектное представление сущности Группа
+ * Объектное представление сущности Chat
  */
 public class Chat implements Serializable {
 
-    private int privateKey;
-    private Calendar date;
-    private List<User> members;
+    private int chatId;
+    private int userOne;
+    private int userTwo;
+    private Date dateCreation;
 
-    public void setMembers(User user, List<User> members) {
-        members.add(user);
-        this.members = members;
+    public Chat(int userOne, int userTwo, Date dateCreation) {
+
+        this.userOne = userOne;
+        this.userTwo = userTwo;
+        this.dateCreation = dateCreation;
     }
 
-    public List<User> getMembers() {
-        return members;
+    public int getChatId() {
+        return chatId;
     }
 
-    public int getPrivateKey() {
-        return privateKey;
+    public int getUserOne() {
+        return userOne;
     }
 
-    public void setPrivateKey(int privateKey) {
-        this.privateKey = privateKey;
+    public void setUserOne(int userOne) {
+        this.userOne = userOne;
     }
 
-    public Calendar getDate() {
-        return date;
+    public int getUserTwo() {
+        return userTwo;
     }
 
-    public void setDate(Calendar date) {
-        this.date = date;
+    public void setUserTwo(int userTwo) {
+        this.userTwo = userTwo;
+    }
+
+    public Date getDateCreation() {
+        return dateCreation;
+    }
+
+    public void setDateCreation(Date dateCreation) {
+        this.dateCreation = dateCreation;
     }
 }

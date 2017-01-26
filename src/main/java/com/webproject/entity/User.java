@@ -2,26 +2,26 @@ package com.webproject.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Объектное представление сущности User.
  */
 public class User implements Serializable {
-
+    private int userId;
     private String login;
     private String password;
-    private String firstName;
-    private String lastName;
-    private String email;
+    private Date dateRegistration;
     private String role;
-    private Date creationDate;
-    private List<Chat> chatsId;
 
-    public User(String login, String password, String email) {
+    public User(String login, String password, Date dateRegistration, String role) {
         this.login = login;
         this.password = password;
-        this.email = email;
+        this.dateRegistration = dateRegistration;
+        this.role = role;
+    }
+
+    public int getUserId() {
+        return userId;
     }
 
     public String getLogin() {
@@ -40,28 +40,12 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public Date getDateRegistration() {
+        return dateRegistration;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDateRegistration(Date dateRegistration) {
+        this.dateRegistration = dateRegistration;
     }
 
     public String getRole() {
@@ -70,21 +54,5 @@ public class User implements Serializable {
 
     public void setRole(String role) {
         this.role = role;
-    }
-
-    public Date getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
-    }
-
-    public List<Chat> getChatsId() {
-        return chatsId;
-    }
-
-    public void setChatsId(List<Chat> chatsId) {
-        this.chatsId = chatsId;
     }
 }

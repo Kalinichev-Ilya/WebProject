@@ -21,3 +21,5 @@ gradlew*
 *.ear
 /src/main/resourcesUsersDB.mv.db
 /src/main/resources.trace.db
+/localtest/
+!/localtest/apache-tomcat-9.0.0.M17/conf/
