@@ -194,10 +194,10 @@
   <!--                       print statement per input line, to ease        -->
   <!--                       debugging?  [true]                             -->
   <!--                                                                      -->
-  <!--   maxLoadedJsps       The maximum privateKey of JSPs that will be loaded -->
+  <!--   maxLoadedJsps       The maximum chat_id of JSPs that will be loaded -->
   <!--                       for a web application. If more than this       -->
-  <!--                       privateKey of JSPs are loaded, the least recently  -->
-  <!--                       used JSPs will be unloaded so that the privateKey  -->
+  <!--                       chat_id of JSPs are loaded, the least recently  -->
+  <!--                       used JSPs will be unloaded so that the chat_id  -->
   <!--                       of JSPs loaded at any one time does not exceed -->
   <!--                       this limit. A value of zero or less indicates  -->
   <!--                       no limit. [-1]                                 -->
@@ -278,7 +278,7 @@
   <!--   debug               Debugging detail level for messages logged     -->
   <!--                       by this servlet.  [0]                          -->
   <!--                                                                      -->
-  <!--   expires             The privateKey of seconds before a page with SSI   -->
+  <!--   expires             The chat_id of seconds before a page with SSI   -->
   <!--                       directives will expire.  [No default]          -->
   <!--                                                                      -->
   <!--   isVirtualWebappRelative                                            -->
@@ -502,7 +502,7 @@
   <!--   debug               Debugging detail level for messages logged     -->
   <!--                       by this servlet.  [0]                          -->
   <!--                                                                      -->
-  <!--   expires             The privateKey of seconds before a page with SSI   -->
+  <!--   expires             The chat_id of seconds before a page with SSI   -->
   <!--                       directives will expire.  [No default]          -->
   <!--                                                                      -->
   <!--   isVirtualWebappRelative                                            -->

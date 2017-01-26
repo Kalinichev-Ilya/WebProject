@@ -8,23 +8,34 @@ import java.util.List;
 
 /**
  * Унифицированный интерфейс управления персистентным состоянием объектов
- * @param <T> тип объекта базы данных
+ *
+ * @param <T>  тип объекта базы данных
  * @param <PK> тип первичного ключа
  */
 public interface GenericDao<T extends Serializable, PK extends Serializable> {
 
-    /** Создает новую запись согласно соответствующему объекту */
-    public T create(Connection conn, T objects) throws PersistException;
+    /**
+     * Создает новую запись согласно соответствующему объекту
+     */
+    public String create(T objects) throws PersistException;
 
-    /** Возвращает объект соответствующий записи с первичным ключом key или null */
-    public T getByPK(PK key, Connection conn) throws PersistException;
+    /**
+     * Возвращает объект соответствующий записи с первичным ключом key.
+     */
+    public T getByID(PK key, Connection conn) throws PersistException;
 
-    /** Сохраняет состояние объекта group в базе данных */
+    /**
+     * Сохраняет обновленное состояние объекта в базе данных.
+     */
     public void update(T object, Connection conn) throws PersistException;
 
-    /** Удаляет запись об объекте из базы данных */
+    /**
+     * Удаляет запись об объекте из базы данных.
+     */
     public void delete(T object, Connection conn) throws PersistException;
 
-    /** Возвращает список объектов соответствующих всем записям в базе данных */
+    /**
+     * Возвращает список объектов соответствующих всем записям в базе данных.
+     */
     public List<T> getAll(Connection conn) throws PersistException;
 }

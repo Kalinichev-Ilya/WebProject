@@ -1,7 +1,9 @@
 package com.webproject.exceptions;
 
+import java.sql.SQLException;
+
 //TODO ???
-public class PersistException extends Exception {
+public class PersistException extends SQLException {
 
     public PersistException() {
     }
@@ -16,9 +18,5 @@ public class PersistException extends Exception {
 
     public PersistException(Throwable cause) {
         super(cause);
-    }
-
-    public PersistException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
     }
 }

@@ -10,12 +10,12 @@ import java.util.List;
 public class JdbcUsersDao implements GenericDao<User, Integer> {
 
     @Override
-    public User create(Connection conn, User objects) throws PersistException {
+    public String create(User objects) throws PersistException {
         return null;
     }
 
     @Override
-    public User getByPK(Integer key, Connection conn) throws PersistException {
+    public User getByID(Integer key, Connection conn) throws PersistException {
         return null;
     }
 
